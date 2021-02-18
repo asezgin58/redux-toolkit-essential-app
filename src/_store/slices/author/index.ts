@@ -13,7 +13,7 @@ export const authorSlice = createSlice({
 export type IAuthor = Author;
 
 // Value export
-export const authorValue = (state: IStore) => state.author;
+export const authorValue = (state: IStore): Author => state.author;
 
 // Actions exports
 export const {setStoreAuthor} = authorSlice.actions;

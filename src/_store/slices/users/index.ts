@@ -6,7 +6,7 @@ export const usersSlice = createSlice({
     initialState: initialUsersData,
     reducers: {
         setStoreUsers: (state: User[], action: PayloadAction<User[]>): User[] => action.payload,
-        deleteStoreUser: (state: IUser[], action: PayloadAction<number>) => {
+        deleteStoreUser: (state: IUser[], action: PayloadAction<number>): IUser[] => {
             const filterList: IUser[] = [...state];
             filterList.splice(filterList.findIndex((item: IUser) => item.id === action.payload), 1);
             return filterList;
@@ -18,7 +18,7 @@ export const usersSlice = createSlice({
 export type IUser = User;
 
 // Value export
-export const usersValue = (state: IStore) => state.users;
+export const usersValue = (state: IStore): IUser[] => state.users;
 
 // Actions exports
 export const {setStoreUsers, deleteStoreUser} = usersSlice.actions;

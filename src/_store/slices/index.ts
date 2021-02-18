@@ -1,9 +1,9 @@
-import authorReducer from './author';
-import usersReducer from './users';
+import author from './author';
+import users from './users';
 
-const reducers = {
-    author: authorReducer,
-    users: usersReducer
+const rootReducer = {
+    author,
+    users
 }
 
-export default reducers;
+export default rootReducer;
